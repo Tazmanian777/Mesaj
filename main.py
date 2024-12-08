@@ -26,7 +26,8 @@ def generate_message():
     message = (
         f"Biletul pe liniile metropolitane a fost activat. "
         f"Valabil pana in {expiration_date} ora {expiration_hour}. "
-        f"Cost 0.62 EUR+TVA . Cod {random_code}. Detalii stbsa.ro\n"
+        f"Cost 0.62 EUR+TVA. Cod {random_code}.\n"
+        f"Detalii stbsa.ro\n"
         f"Calatorie placuta!"
     )
     
