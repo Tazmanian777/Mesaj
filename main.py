@@ -29,6 +29,9 @@ def generate_message():
         f"Cost 0.62 EUR+TVA . Cod {random_code}. Detalii stbsa.ro\n"
         f"Calatorie placuta!"
     )
+    
+    # Replace newline characters with spaces
+    message = message.replace("\n", " ")
     return message
 
 @app.route("/generate", methods=["GET"])
