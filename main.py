@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from datetime import datetime, timedelta
 import pytz
+import os
 import random
 
 app = Flask(__name__)
@@ -38,5 +39,10 @@ def generate():
     message = generate_message()
     return message, 200, {"Content-Type": "text/plain"}
 
+import os
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    # Get the PORT environment variable or default to 5000
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
